@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CUSTOMER_PROFILE",
+    "label": "Customer profile",
+    "description": "The customer's stored identity, contact details, and account preferences."
+  },
+  {
+    "id": "ORDER_LEDGER",
+    "label": "Order ledger",
+    "description": "The authoritative collection of purchase orders and their lifecycle states."
+  },
+  {
+    "id": "WAREHOUSE_STOCK",
+    "label": "Warehouse stock",
+    "description": "Current sellable inventory quantities reserved and held by the warehouse."
+  }
+]
+

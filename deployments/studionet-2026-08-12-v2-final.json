@@ -1,0 +1,95 @@
+{
+  "record_type": "historical_superseded_hosted_deployment_verification",
+  "submission_eligible_for_current_source": false,
+  "superseded_reason": "The repository contract source changed after this hosted run. This record applies only to source SHA-256 d10c59c1b585deb7f88960dabd2c8c032579d25f9417d5291378da29bfadd41c and must not be submitted as evidence for a later revision.",
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc_url": "https://studio.genlayer.com/api",
+  "contract_address": "0x19636EF3628FdDD8Dbecd9F7bA2BBE6687514B42",
+  "contract_version": "0.2.0",
+  "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "contract_source_sha256": "d10c59c1b585deb7f88960dabd2c8c032579d25f9417d5291378da29bfadd41c",
+  "contract_source_bytes": 38314,
+  "hosted_test": {
+    "test": "tests/integration/test_semantic_resource_mutex_live.py::test_live_consensus_maps_and_grants_exact_multi_resource_footprint",
+    "execution": "PASSED",
+    "pytest_duration_seconds": 116.53,
+    "waited_for_status": "FINALIZED",
+    "execution_success_asserted": true,
+    "leader_only": false,
+    "observed_result": {
+      "action_id": 1,
+      "classification": "MAPPED",
+      "stored_status_at_execution": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "has_active_lease_at_execution": true
+    }
+  },
+  "source_readback": {
+    "rpc_method": "gen_getContractCode",
+    "deployed_source_readback_sha256": "d10c59c1b585deb7f88960dabd2c8c032579d25f9417d5291378da29bfadd41c",
+    "deployed_source_readback_bytes": 38314,
+    "exact_bytes_equal": true,
+    "schema_readback_succeeded": true
+  },
+  "durable_cli_readback": {
+    "succeeded": true,
+    "policy": {
+      "contract_version": "0.2.0",
+      "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+      "scope": "ONE_ACTION_CLOSED_RESOURCE_FOOTPRINT",
+      "deployer": "0x7862e8350e85c62c576c86a3c475420386391804",
+      "config_digest": "496b4341a4e8a08aefc6642851acf3af2454f020bfa4ef1622216fb9b7d64a02",
+      "authorization_epoch": 0,
+      "authorization_digest": "50c49a2d54c703fb045731bbb5b19a33277fe7570c283fd44591652904b0745f",
+      "resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "max_queue_size": 4,
+      "max_active_leases": 4,
+      "max_lease_seconds": 1800,
+      "max_total_actions": 256,
+      "max_total_events": 17152
+    },
+    "action_count": 1,
+    "action_1": {
+      "classification": "MAPPED",
+      "stored_status_at_readback": "LEASE_ACTIVE",
+      "effective_status_at_readback": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "requested_lease_seconds": 300,
+      "acquired_at": 1786542499,
+      "acquired_at_utc": "2026-08-12T13:48:19Z",
+      "expires_at": 1786542799,
+      "expires_at_utc": "2026-08-12T13:53:19Z",
+      "request_digest": "f795444a22d5f253b59eaff50498e42c2c0d43e4740c30f9fad314663a387bb9",
+      "footprint_digest": "4e2e76a446a962584894861b5ee45a0f0750b24cddf4e5e57343ea72dc1b8136",
+      "action_digest": "be4765da4c3bede855cae3ea1cd8e6ae8e48cf6b362362e5ae7b67aed75092c8"
+    },
+    "has_active_lease_at_readback": true,
+    "event_count": 1,
+    "event_1_code": "LEASE_GRANTED",
+    "event_1_digest": "c9f0f4b26bb2c87ab56273f26761b6c9b638552d1f0249611480983cf360ecf1",
+    "queue_action_ids": [],
+    "active_action_ids": [
+      1
+    ]
+  },
+  "validator_evidence": "The no-mock hosted test ran with leader_only false and finalized successfully. The harness exposed no validator identities, model names, individual votes, or vote count, so none are claimed.",
+  "deployment_transaction_id": null,
+  "smoke_transaction_ids": null,
+  "transaction_id_note": "The gltest output did not expose transaction IDs; none are invented.",
+  "explorer_contract_url": null,
+  "explorer_note": "The StudioNet explorer address route returned HTTP 503 when checked, so no working explorer link is claimed in this record.",
+  "recorded_at": "2026-08-12T13:51:12Z"
+}

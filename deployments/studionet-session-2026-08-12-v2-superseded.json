@@ -1,0 +1,42 @@
+{
+  "record_type": "historical_superseded_hosted_session",
+  "submission_eligible_for_current_source": false,
+  "superseded_reason": "A final hardening revision was identified after this run. This record applies only to the exact source hash below and must not be used as deployment evidence for a later source revision.",
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc_url": "https://studio.genlayer.com/api",
+  "contract_address": "0xB23fBFC3Da5094fADD31fFA67c1E888CB8bE96b4",
+  "contract_version": "0.2.0",
+  "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "contract_source_sha256": "4e3b5c7a85f6b3a209a8c92d1a9e8396c41313925b8edd720490a410f3675b7c",
+  "contract_source_bytes": 36693,
+  "hosted_test": {
+    "test": "tests/integration/test_semantic_resource_mutex_live.py::test_live_consensus_maps_and_grants_exact_multi_resource_footprint",
+    "execution": "PASSED",
+    "pytest_duration_seconds": 127.18,
+    "observed_result": {
+      "action_id": 1,
+      "classification": "MAPPED",
+      "stored_status_at_execution": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "has_active_lease_at_execution": true
+    }
+  },
+  "source_readback": {
+    "rpc_method": "gen_getContractCode",
+    "deployed_source_readback_sha256": "4e3b5c7a85f6b3a209a8c92d1a9e8396c41313925b8edd720490a410f3675b7c",
+    "deployed_source_readback_bytes": 36693,
+    "exact_bytes_equal": true
+  },
+  "evidence_scope": "Session-scoped hosted StudioNet integration. The gltest process verified deployment execution, write execution, and contract state in-session. Later CLI state calls could not discover the contract, although independent gen_getContractCode and gen_getContractSchema calls resolved it.",
+  "validator_evidence": "The no-mock hosted test ran with leader_only false and finalized successfully. The harness exposed no validator identities, model names, individual votes, or vote count, so none are claimed.",
+  "deployment_transaction_id": null,
+  "smoke_transaction_ids": null,
+  "transaction_id_note": "The test output did not expose transaction IDs; none are invented.",
+  "recorded_date": "2026-08-12"
+}

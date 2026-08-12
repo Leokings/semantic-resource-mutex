@@ -1,0 +1,92 @@
+{
+  "record_type": "finalized_hosted_deployment_verification",
+  "submission_eligible_for_current_source": true,
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc_url": "https://studio.genlayer.com/api",
+  "contract_address": "0xde0a27C1FFa512a404B1958f33F5ccbcdc8a3986",
+  "contract_version": "0.2.0",
+  "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "contract_source_sha256": "b603007a0280eff0b1aed672e365b8ec5da929e5a4dabffc486adf057b7360cc",
+  "contract_source_bytes": 38820,
+  "hosted_test": {
+    "test": "tests/integration/test_semantic_resource_mutex_live.py::test_live_consensus_maps_and_grants_exact_multi_resource_footprint",
+    "execution": "PASSED",
+    "pytest_duration_seconds": 138.51,
+    "waited_for_status": "FINALIZED",
+    "execution_success_asserted": true,
+    "leader_only": false,
+    "observed_result": {
+      "action_id": 1,
+      "classification": "MAPPED",
+      "stored_status_at_execution": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "has_active_lease_at_execution": true
+    }
+  },
+  "source_readback": {
+    "rpc_method": "gen_getContractCode",
+    "deployed_source_readback_sha256": "b603007a0280eff0b1aed672e365b8ec5da929e5a4dabffc486adf057b7360cc",
+    "deployed_source_readback_bytes": 38820,
+    "exact_bytes_equal": true
+  },
+  "durable_cli_readback": {
+    "succeeded": true,
+    "policy": {
+      "contract_version": "0.2.0",
+      "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+      "scope": "ONE_ACTION_CLOSED_RESOURCE_FOOTPRINT",
+      "deployer": "0x2f52727911ca246c1b5d6f7997fdf72f21b5f2b2",
+      "config_digest": "ba1756f08dfe911009a03bfe5c430124593efa43be671ba2b58fc4ab4df147ad",
+      "authorization_epoch": 0,
+      "authorization_digest": "dbf58efb64c41cd3e4dfdbf89089b09b3695f373bfb3a1788debdbdae7598462",
+      "resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "max_queue_size": 4,
+      "max_active_leases": 4,
+      "max_lease_seconds": 1800,
+      "max_total_actions": 256,
+      "max_actions_per_requester": 32,
+      "max_total_events": 17152
+    },
+    "action_count": 1,
+    "action_1": {
+      "classification": "MAPPED",
+      "stored_status_at_readback": "LEASE_ACTIVE",
+      "effective_status_at_readback": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ],
+      "requested_lease_seconds": 300,
+      "acquired_at": 1786545635,
+      "acquired_at_utc": "2026-08-12T14:40:35Z",
+      "expires_at": 1786545935,
+      "expires_at_utc": "2026-08-12T14:45:35Z",
+      "request_digest": "77cb5e2c98a570cdb5c669e22be3d7c6f853ece836ece9a403d7e95f7695e3c7",
+      "footprint_digest": "e167032b5c76c9fc1030409ec6b2b0422eedbb47b05a2c2fb92671f9af18f158",
+      "action_digest": "7b568c3631962f451acd89e201ff406613c6b30a5c16792b6a22f3328c3ab4ef"
+    },
+    "has_active_lease_at_readback": true,
+    "event_count": 1,
+    "event_1_code": "LEASE_GRANTED",
+    "event_1_digest": "88f0d8c69b001cf5602412b7ec7291081dd255d08fcae42dad3e25d2a53afb94",
+    "queue_action_ids": [],
+    "active_action_ids": [
+      1
+    ]
+  },
+  "validator_evidence": "The no-mock hosted test ran with leader_only false and finalized successfully. The harness exposed no validator identities, model names, individual votes, or vote count, so none are claimed.",
+  "deployment_transaction_id": null,
+  "smoke_transaction_ids": null,
+  "transaction_id_note": "The gltest output did not expose transaction IDs; none are invented.",
+  "recorded_at": "2026-08-12T14:42:50Z"
+}

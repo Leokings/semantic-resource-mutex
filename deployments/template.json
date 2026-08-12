@@ -1,0 +1,16 @@
+{
+  "network": "REPLACE_AFTER_REAL_DEPLOYMENT",
+  "chain_id": null,
+  "submission_eligible_for_current_source": false,
+  "contract_address": "",
+  "deployment_transaction_id": "",
+  "smoke_transaction_ids": [],
+  "config_digest": "",
+  "contract_version": "0.2.0",
+  "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "contract_source_sha256": "",
+  "deployed_source_readback_sha256": "",
+  "source_hashes_equal": false,
+  "validator_evidence": "",
+  "recorded_at": ""
+}

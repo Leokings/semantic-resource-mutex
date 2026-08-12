@@ -1,0 +1,67 @@
+{
+  "record_type": "historical_superseded_deployment",
+  "submission_eligible_for_current_source": false,
+  "superseded_reason": "The repository now contains Semantic Resource Mutex V2 with revocation containment, bounded histories, authorization epochs, and strengthened digests. This address runs the former V1 source.",
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc_url": "https://studio.genlayer.com/api",
+  "contract_address": "0xc5C8A8b496343897c6fefcF35b140D1fC5c9E421",
+  "deployed_contract_version": "0.1.0",
+  "deployed_policy_version": "SEMANTIC_RESOURCE_MUTEX_V1",
+  "deployed_source_sha256": "4cf759c48f0397857f04ead520795ab21fca04a4a609e973fab48792ed289531",
+  "deployed_source_bytes": 27811,
+  "current_local_contract_version": "0.2.0",
+  "current_local_policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "current_local_source_sha256": "4e3b5c7a85f6b3a209a8c92d1a9e8396c41313925b8edd720490a410f3675b7c",
+  "current_local_source_bytes": 36693,
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "historical_test": {
+    "test": "tests/integration/test_semantic_resource_mutex_live.py::test_live_consensus_maps_and_grants_exact_multi_resource_footprint",
+    "execution": "PASSED",
+    "duration_seconds": 113.2,
+    "observed_result": {
+      "action_id": 1,
+      "classification": "MAPPED",
+      "stored_status_at_execution": "LEASE_ACTIVE",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ]
+    }
+  },
+  "read_only_verification": {
+    "verified_at": "2026-08-12T13:15:04Z",
+    "deployed_source_readback_sha256": "4cf759c48f0397857f04ead520795ab21fca04a4a609e973fab48792ed289531",
+    "deployed_source_equal_to_former_v1_local_bytes": true,
+    "deployed_schema_matches_v1": true,
+    "config_digest": "f4f117c8a8a1d9203d76026f60bfef7a974c97aaeb53b8cdfa8295243afffa8d",
+    "deployer": "0xb0b18c1165bf28aafdc28f8c3f5400b89294009b",
+    "max_queue_size": 4,
+    "max_active_leases": 4,
+    "max_lease_seconds": 1800,
+    "resource_ids": [
+      "ORDER_LEDGER",
+      "WAREHOUSE_STOCK"
+    ],
+    "action_count": 1,
+    "action_1": {
+      "classification": "MAPPED",
+      "stored_status": "LEASE_ACTIVE",
+      "effective_status_at_verification": "EXPIRED",
+      "acquired_at": 1786539058,
+      "acquired_at_utc": "2026-08-12T12:50:58Z",
+      "expires_at": 1786539358,
+      "expires_at_utc": "2026-08-12T12:55:58Z",
+      "read_resource_ids": [],
+      "write_resource_ids": [
+        "ORDER_LEDGER",
+        "WAREHOUSE_STOCK"
+      ]
+    }
+  },
+  "validator_evidence": "Hosted StudioNet consensus completed successfully through gltest. The harness did not expose individual validator identities or vote counts, so no vote-count or heterogeneous-validator claim is made.",
+  "transaction_ids": null,
+  "transaction_id_note": "The gltest output did not expose transaction IDs; none are invented.",
+  "recorded_date": "2026-08-12"
+}

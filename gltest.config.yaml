@@ -1,0 +1,13 @@
+networks:
+  default: localnet
+  localnet:
+    url: "http://127.0.0.1:4113/api"
+  studionet: {}
+  testnet_bradbury: {}
+
+paths:
+  contracts: "contracts"
+  artifacts: ".artifacts"
+
+environment: .env
+

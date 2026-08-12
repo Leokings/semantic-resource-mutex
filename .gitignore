@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.gltest_cache/
+.artifacts/
+artifacts/
+.env
+.env.*
+!.env.example
+*.log
+*.pid

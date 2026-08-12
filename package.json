@@ -1,0 +1,9 @@
+{
+  "name": "semantic-resource-mutex",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": { "check:deploy": "node --check deploy/001_deploy.js" }
+}
