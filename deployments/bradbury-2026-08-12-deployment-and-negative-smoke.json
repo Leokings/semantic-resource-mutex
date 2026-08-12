@@ -1,0 +1,247 @@
+{
+  "record_type": "bradbury_deployment_and_semantic_smoke_verification",
+  "submission_eligible_for_current_source": true,
+  "submission_eligibility_note": "The current source deployment is byte-identical and finalized successfully. V3 is finalized positive semantic evidence with successful execution and durable action/event state. The two earlier non-accepted attempts remain disclosed as negative history.",
+  "network": "bradbury",
+  "chain_id": 4221,
+  "rpc_url": "https://rpc-bradbury.genlayer.com",
+  "contract_address": "0x5DdACbe80468872442D88B37589652f7EcaB57ED",
+  "contract_version": "0.2.0",
+  "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+  "contract_source_sha256": "b603007a0280eff0b1aed672e365b8ec5da929e5a4dabffc486adf057b7360cc",
+  "contract_source_bytes": 38820,
+  "deployment": {
+    "transaction_id": "0xfca0d07139d47d5eee0d5ba691a67731427625e04d2d7c87a49839745c81ddea",
+    "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "status": "FINALIZED",
+    "consensus_result": "AGREE",
+    "execution_result": "FINISHED_WITH_RETURN",
+    "round": 0,
+    "votes_committed": 5,
+    "votes_revealed": 5,
+    "vote_counts": {
+      "AGREE": 5
+    },
+    "validator_result_hash": "0xeb5285e6e79e8f0a514fa2ffaa29bc06174e7f0953d00593416e43113e48c7e7",
+    "all_validator_result_hashes_equal": true,
+    "created_at": "2026-08-12T15:06:17Z",
+    "last_vote_at": "2026-08-12T15:06:27Z",
+    "block_range": {
+      "activation": 17300012,
+      "processing": 17300017,
+      "proposal": 17300020
+    }
+  },
+  "source_readback": {
+    "rpc_method": "gen_getContractCode",
+    "deployed_source_readback_sha256": "b603007a0280eff0b1aed672e365b8ec5da929e5a4dabffc486adf057b7360cc",
+    "deployed_source_readback_bytes": 38820,
+    "exact_bytes_equal": true
+  },
+  "schema_readback": {
+    "rpc_method": "gen_getContractSchema",
+    "expected_methods_present": true,
+    "method_count": 17,
+    "methods": [
+      "cancel_queued",
+      "get_action",
+      "get_action_count",
+      "get_active_leases",
+      "get_authorization_event",
+      "get_authorization_event_count",
+      "get_event",
+      "get_event_count",
+      "get_policy",
+      "get_queue",
+      "has_active_lease",
+      "is_requester_authorized",
+      "release_lease",
+      "renew_lease",
+      "request_lease",
+      "set_requester_authorization",
+      "sweep_expired"
+    ]
+  },
+  "policy_readback": {
+    "authorization_digest": "8e5050b1fe7c890472b8266995009450cd4fccd763ccbffe514e27adde6d6832",
+    "authorization_epoch": 0,
+    "config_digest": "7d8fd62150361d9ff7ef58feff92b51afcb92bccc49451862e31e54664407f87",
+    "contract_version": "0.2.0",
+    "deployer": "0x797d3b25fb2cca0ff93f60df1910267f3822d655",
+    "max_actions_per_requester": 32,
+    "max_active_leases": 4,
+    "max_auth_changes_per_requester": 4,
+    "max_authorized_requesters": 64,
+    "max_lease_seconds": 1800,
+    "max_queue_size": 4,
+    "max_renewals_per_action": 64,
+    "max_total_actions": 256,
+    "max_total_events": 17152,
+    "policy_version": "SEMANTIC_RESOURCE_MUTEX_V2",
+    "resource_ids": [
+      "ORDER_LEDGER",
+      "WAREHOUSE_STOCK"
+    ],
+    "scope": "ONE_ACTION_CLOSED_RESOURCE_FOOTPRINT"
+  },
+  "first_semantic_smoke": {
+    "evidence_class": "NEGATIVE_NO_STATE_EVIDENCE",
+    "transaction_id": "0x921a4ccda0e131e1e6352ea5185c068716f51a6ce463d89c667666e0711ea8ca",
+    "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "status": "UNDETERMINED",
+    "consensus_result": "DISAGREE",
+    "leader_execution_result": "FINISHED_WITH_RETURN",
+    "accepted_state_mutation": false,
+    "last_round": 0,
+    "votes_committed": 5,
+    "votes_revealed": 5,
+    "vote_counts": {
+      "AGREE": 2,
+      "DETERMINISTIC_VIOLATION": 3
+    },
+    "created_at": "2026-08-12T15:39:28Z",
+    "last_vote_at": "2026-08-12T15:41:26Z",
+    "block_range": {
+      "activation": 17305109,
+      "processing": 17305200,
+      "proposal": 17305202
+    },
+    "state_readback_after_first_run_before_later_retries": {
+      "action_count": 0,
+      "event_count": 0
+    },
+    "interpretation": "The proposed semantic mapping was not accepted. The contract safely retained no action or event from this transaction. This transaction is not positive submission evidence."
+  },
+  "second_semantic_smoke": {
+    "evidence_class": "NEGATIVE_TIMEOUT_NO_ACCEPTED_STATE_EVIDENCE",
+    "transaction_id": "0x01a45ed75a1dac7f9149672cb115f81e60126c98137d27de98b9ffc6a7beb23d",
+    "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "earlier_cli_poll_observation": {
+      "status": "LEADER_TIMEOUT",
+      "consensus_result": "IDLE",
+      "note": "This was an earlier polling observation. It is retained as history and is not represented as the transaction's current status."
+    },
+    "current_sdk_receipt": {
+      "observed_at": "2026-08-12T16:29:10Z",
+      "status": "VALIDATORS_TIMEOUT",
+      "consensus_result": "TIMEOUT",
+      "leader_execution_result": "FINISHED_WITH_RETURN",
+      "accepted_state_mutation": false,
+      "sdk_num_of_rounds": 6,
+      "last_round": 6,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_counts": {
+        "AGREE": 1,
+        "DETERMINISTIC_VIOLATION": 1,
+        "TIMEOUT": 3
+      },
+      "consumed_validator_count": 6,
+      "created_at": "2026-08-12T16:24:33Z",
+      "last_vote_at": "2026-08-12T16:25:31Z",
+      "block_range": {
+        "activation": 17309136,
+        "processing": 17309143,
+        "proposal": 17309144
+      }
+    },
+    "interpretation": "The transaction timed out despite a successful leader execution result. Its proposed write was not accepted and it is not positive submission evidence."
+  },
+  "third_semantic_smoke_v3": {
+    "evidence_class": "POSITIVE_FINALIZED_SEMANTIC_AND_STATE_EVIDENCE",
+    "transaction_id": "0xd34f5c9037a67c0ccd9fbfcde6f8f7b387579602733f84d46514713408c53a2c",
+    "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "request_reference": "BRADBURY-MUTEX-20260812-V3",
+    "earlier_cli_poll_observation": {
+      "status": "LEADER_TIMEOUT",
+      "consensus_result": "IDLE",
+      "note": "This was an earlier polling observation. It is retained as history and is superseded for current-status reporting by the direct SDK receipt below."
+    },
+    "current_sdk_receipt": {
+      "observed_at": "2026-08-12T16:58:34Z",
+      "status": "FINALIZED",
+      "status_code": 7,
+      "finalized": true,
+      "consensus_result": "AGREE",
+      "execution_result": "FINISHED_WITH_RETURN",
+      "sdk_num_of_rounds": 2,
+      "sdk_last_round_reported": 0,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_counts": {
+        "AGREE": 3,
+        "DETERMINISTIC_VIOLATION": 1,
+        "TIMEOUT": 1
+      },
+      "accepted_result_hash": "0x8df0bbe27ec332aa78d8d817eb828ec85a141be94051f28d2b6abadd50ff6a11",
+      "consumed_validator_count": 7,
+      "created_at": "2026-08-12T16:24:57Z",
+      "last_vote_at": "2026-08-12T16:26:39Z",
+      "current_chain_timestamp_at_readback": 1786553909,
+      "block_range": {
+        "activation": 17309136,
+        "processing": 17309226,
+        "proposal": 17309228
+      }
+    },
+    "latest_final_state_readback": {
+      "observed_at": "2026-08-12T16:58:34Z",
+      "transaction_hash_variant": "latest-final",
+      "action_count": 1,
+      "event_count": 1,
+      "action_1": {
+        "action_id": 1,
+        "request_reference": "BRADBURY-MUTEX-20260812-V3",
+        "owner": "0x797d3b25fb2cca0ff93f60df1910267f3822d655",
+        "classification": "MAPPED",
+        "stored_status": "LEASE_ACTIVE",
+        "effective_status": "EXPIRED",
+        "read_resource_ids": [],
+        "write_resource_ids": [
+          "ORDER_LEDGER",
+          "WAREHOUSE_STOCK"
+        ],
+        "requested_lease_seconds": 1800,
+        "submitted_at": 1786551897,
+        "acquired_at": 1786551897,
+        "acquired_at_utc": "2026-08-12T16:24:57Z",
+        "expires_at": 1786553697,
+        "expires_at_utc": "2026-08-12T16:54:57Z",
+        "authorization_epoch": 0,
+        "authorization_digest": "8e5050b1fe7c890472b8266995009450cd4fccd763ccbffe514e27adde6d6832",
+        "config_digest": "7d8fd62150361d9ff7ef58feff92b51afcb92bccc49451862e31e54664407f87",
+        "request_digest": "5b4ab539cf0ce8979b233eba2a05d54bbe2e67675d420318e203d7ea7f01f3c4",
+        "footprint_digest": "3c6bec80fef5ac725781a8e5833a96379f685a2ada14672e20741c178f3d6842",
+        "action_digest": "59dd024da0f6b76d45228fce6108acec43f53ca66cceeb0286b49c122b648bc7"
+      },
+      "event_1": {
+        "event_id": 1,
+        "event_code": "LEASE_GRANTED",
+        "status": "LEASE_ACTIVE",
+        "action_id": 1,
+        "action_digest": "59dd024da0f6b76d45228fce6108acec43f53ca66cceeb0286b49c122b648bc7",
+        "event_digest": "b996e148864508d163a13143cd8c5235d60372d32bedd9341f6d24d7aca9be80"
+      },
+      "has_active_lease_at_readback": false,
+      "active_action_ids": [],
+      "queued_action_ids": []
+    },
+    "interpretation": "The V3 transaction finalized with successful semantic consensus and execution. The exact mapping and append-only LEASE_GRANTED record are durable through latest-final state. By the post-finality readback, the 1,800-second lease had naturally expired: stored_status remains LEASE_ACTIVE until a sweep or another lifecycle write, while effective_status is EXPIRED, has_active_lease is false, and get_active_leases returns no active IDs. No cleanup write was submitted for this verification."
+  },
+  "semantic_retry": {
+    "status": "FINALIZED_POSITIVE",
+    "required_before_submission": false,
+    "positive_transaction_id": "0xd34f5c9037a67c0ccd9fbfcde6f8f7b387579602733f84d46514713408c53a2c",
+    "current_transaction_status": "FINALIZED",
+    "finalized_positive_semantic_evidence": true,
+    "completion_note": "The finalized V3 receipt and post-finality latest-final state were re-read. Historical failed and timed-out attempts remain unchanged."
+  },
+  "validator_evidence": "On-chain receipt data exposes five commit/reveal votes for each recorded transaction. Validator addresses are intentionally omitted. No claim of model diversity, provider heterogeneity, or validator independence is made.",
+  "sanitization": {
+    "raw_contract_code_included": false,
+    "raw_calldata_included": false,
+    "validator_addresses_included": false,
+    "private_material_included": false
+  },
+  "recorded_at": "2026-08-12T16:58:34Z"
+}
