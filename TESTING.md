@@ -49,8 +49,8 @@ Current-source deployment at `0x5DdACbe80468872442D88B37589652f7EcaB57ED` finali
 
 The semantic test history is deliberately preserved:
 
-- attempt 1, `0x921a4ccda0e131e1e6352ea5185c068716f51a6ce463d89c667666e0711ea8ca`: `UNDETERMINED/DISAGREE`, successful leader execution, no accepted action or event;
-- attempt 2, `0x01a45ed75a1dac7f9149672cb115f81e60126c98137d27de98b9ffc6a7beb23d`: `VALIDATORS_TIMEOUT/TIMEOUT`, successful leader execution, no accepted action or event;
+- attempt 1, `0x921a4ccda0e131e1e6352ea5185c068716f51a6ce463d89c667666e0711ea8ca`: `FINALIZED/DISAGREE`, successful leader execution, no accepted action or event;
+- attempt 2, `0x01a45ed75a1dac7f9149672cb115f81e60126c98137d27de98b9ffc6a7beb23d`: `FINALIZED/TIMEOUT`, successful leader execution, no accepted action or event;
 - V3, `0xd34f5c9037a67c0ccd9fbfcde6f8f7b387579602733f84d46514713408c53a2c`: `FINALIZED/AGREE/FINISHED_WITH_RETURN`, five commits and reveals, with three `AGREE`, one `DETERMINISTIC_VIOLATION`, and one `TIMEOUT`.
 
 V3 durably mapped the action to reads `[]` and writes `[ORDER_LEDGER, WAREHOUSE_STOCK]`, then recorded action 1 and event 1 (`LEASE_GRANTED`) with action digest `59dd024da0f6b76d45228fce6108acec43f53ca66cceeb0286b49c122b648bc7`. The post-finality read was intentionally read-only. Because finality arrived after the 1,800-second lease lifetime, `stored_status` was `LEASE_ACTIVE`, `effective_status` was `EXPIRED`, `has_active_lease` was false, and the active-lease view was empty. This demonstrates the documented stored/effective expiry distinction; no sweep transaction was submitted. Full sanitized evidence is in [`deployments/bradbury-2026-08-12-deployment-and-negative-smoke.json`](deployments/bradbury-2026-08-12-deployment-and-negative-smoke.json).

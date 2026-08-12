@@ -13,6 +13,7 @@
   "deployment": {
     "transaction_id": "0xfca0d07139d47d5eee0d5ba691a67731427625e04d2d7c87a49839745c81ddea",
     "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "pre_finality_status": "UNDETERMINED",
     "status": "FINALIZED",
     "consensus_result": "AGREE",
     "execution_result": "FINISHED_WITH_RETURN",
@@ -88,7 +89,8 @@
     "evidence_class": "NEGATIVE_NO_STATE_EVIDENCE",
     "transaction_id": "0x921a4ccda0e131e1e6352ea5185c068716f51a6ce463d89c667666e0711ea8ca",
     "sender": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
-    "status": "UNDETERMINED",
+    "status": "FINALIZED",
+    "terminal_status_rechecked_on": "2026-08-12",
     "consensus_result": "DISAGREE",
     "leader_execution_result": "FINISHED_WITH_RETURN",
     "accepted_state_mutation": false,
@@ -121,9 +123,11 @@
       "consensus_result": "IDLE",
       "note": "This was an earlier polling observation. It is retained as history and is not represented as the transaction's current status."
     },
-    "current_sdk_receipt": {
-      "observed_at": "2026-08-12T16:29:10Z",
-      "status": "VALIDATORS_TIMEOUT",
+    "terminal_sdk_receipt": {
+      "pre_finality_observed_at": "2026-08-12T16:29:10Z",
+      "pre_finality_status": "VALIDATORS_TIMEOUT",
+      "status": "FINALIZED",
+      "terminal_status_rechecked_on": "2026-08-12",
       "consensus_result": "TIMEOUT",
       "leader_execution_result": "FINISHED_WITH_RETURN",
       "accepted_state_mutation": false,
@@ -234,7 +238,7 @@
     "positive_transaction_id": "0xd34f5c9037a67c0ccd9fbfcde6f8f7b387579602733f84d46514713408c53a2c",
     "current_transaction_status": "FINALIZED",
     "finalized_positive_semantic_evidence": true,
-    "completion_note": "The finalized V3 receipt and post-finality latest-final state were re-read. Historical failed and timed-out attempts remain unchanged."
+    "completion_note": "The finalized V3 receipt and post-finality latest-final state were re-read. Historical attempt 1 later finalized DISAGREE and attempt 2 later finalized TIMEOUT; neither wrote accepted state."
   },
   "validator_evidence": "On-chain receipt data exposes five commit/reveal votes for each recorded transaction. Validator addresses are intentionally omitted. No claim of model diversity, provider heterogeneity, or validator independence is made.",
   "sanitization": {
